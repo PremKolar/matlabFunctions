@@ -22,7 +22,7 @@ function [idxlin,idxY,idxX] = binDownGlobalMap(inLat,inLon,outLat,outLon)
     end
     idxx = idxx{1};
     idxlin = nansum(idxx,2);
-    [idxY,idxX] = raise_1d_to_2d(size(inLat,1));
+    [idxY,idxX] = raise_1d_to_2d(size(inLat,1),idxlin);
 end
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % split number of loop iterations into chunks for spmd
